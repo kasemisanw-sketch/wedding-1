@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sara & Mohamed — Wedding invitation" />
+  <title>Sara & Mohamed | Wedding</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Click to enter -->
+  <div id="gate" class="gate" aria-hidden="false" role="dialog" aria-modal="true" aria-labelledby="gateTitle">
+    <div class="gate__inner">
+      <p class="gate__eyebrow">Together with their families</p>
+      <h1 class="gate__title" id="gateTitle">SARA <span class="gate__amp">&amp;</span> MOHAMED</h1>
+      <p class="gate__date">Saturday, May 2, 2026</p>
+      <button type="button" class="gate__cta" id="gateOpen">Click to open invitation</button>
+    </div>
+    <div class="gate__grain" aria-hidden="true"></div>
+  </div>
+
+  <main id="mainContent" class="main" tabindex="-1" hidden>
+    <header class="hero section" data-animate>
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="container hero__content">
+        <p class="eyebrow reveal">We invite you to celebrate</p>
+        <h1 class="hero__names reveal">SARA <span class="hero__amp">&amp;</span> MOHAMED</h1>
+        <p class="hero__tagline reveal">A day of love, laughter, and forever</p>
+        <div class="hero__divider reveal" aria-hidden="true"></div>
+        <p class="hero__when reveal">Saturday, May 2, 2026</p>
+        <p class="hero__alt reveal">Additional celebration: <time datetime="2027-10-17">Friday, October 17, 2027</time></p>
+      </div>
+    </header>
+
+    <section class="section countdown-wrap" data-animate>
+      <div class="container">
+        <h2 class="section__title reveal">Until we say “I do”</h2>
+        <p class="section__lead reveal">Counting down to May 2, 2026</p>
+        <div class="countdown" id="countdown" aria-live="polite">
+          <div class="countdown__unit reveal">
+            <span class="countdown__value" id="cdDays">00</span>
+            <span class="countdown__label">Days</span>
+          </div>
+          <div class="countdown__unit reveal">
+            <span class="countdown__value" id="cdHours">00</span>
+            <span class="countdown__label">Hours</span>
+          </div>
+          <div class="countdown__unit reveal">
+            <span class="countdown__value" id="cdMinutes">00</span>
+            <span class="countdown__label">Minutes</span>
+          </div>
+          <div class="countdown__unit reveal">
+            <span class="countdown__value" id="cdSeconds">00</span>
+            <span class="countdown__label">Seconds</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--muted" data-animate>
+      <div class="container narrow">
+        <h2 class="section__title reveal">Our story</h2>
+        <p class="prose reveal">
+          From the first hello to this beautiful moment, every step has led us here.
+          We would be honored to share our wedding day with you—your presence would
+          mean the world as we begin our next chapter together.
+        </p>
+      </div>
+    </section>
+
+    <section class="section video-section" data-animate>
+      <div class="container">
+        <h2 class="section__title reveal">A glimpse of us</h2>
+        <p class="section__lead reveal">Our journey, in motion</p>
+        <div class="video-frame reveal">
+          <div class="video-frame__ratio video-frame__ratio--placeholder" id="videoHost">
+            <div class="video-placeholder">
+              <span class="video-placeholder__icon" aria-hidden="true">▶</span>
+              <p class="video-placeholder__text">Your video will appear here</p>
+              <p class="video-placeholder__hint">Paste a YouTube or Vimeo embed URL in <code>script.js</code> (<code>VIDEO_EMBED_URL</code>) or add an <code>&lt;iframe&gt;</code> in <code>index.html</code>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--muted" data-animate>
+      <div class="container narrow">
+        <h2 class="section__title reveal">Details</h2>
+        <ul class="details-list">
+          <li class="reveal">
+            <span class="details-list__label">Couple</span>
+            <span class="details-list__value">SARA &amp; MOHAMED</span>
+          </li>
+          <li class="reveal">
+            <span class="details-list__label">Ceremony &amp; reception</span>
+            <span class="details-list__value">Saturday, May 2, 2026</span>
+          </li>
+          <li class="reveal">
+            <span class="details-list__label">Additional date</span>
+            <span class="details-list__value"><time datetime="2027-10-17">Friday, October 17, 2027</time> (2027/10/17)</span>
+          </li>
+          <li class="reveal">
+            <span class="details-list__label">Attire</span>
+            <span class="details-list__value">Formal / elegant (details to follow)</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section rsvp-section" id="rsvp" data-animate>
+      <div class="container narrow">
+        <h2 class="section__title reveal">RSVP</h2>
+        <p class="section__lead reveal">Kindly respond by April 2, 2026</p>
+        <form class="rsvp-form reveal" id="rsvpForm" novalidate>
+          <div class="field">
+            <label for="guestName">Full name</label>
+            <input type="text" id="guestName" name="name" required autocomplete="name" placeholder="Your name" />
+          </div>
+          <div class="field">
+            <label for="guestEmail">Email</label>
+            <input type="email" id="guestEmail" name="email" required autocomplete="email" placeholder="you@example.com" />
+          </div>
+          <div class="field field--inline">
+            <div>
+              <label for="guests">Number of guests</label>
+              <input type="number" id="guests" name="guests" min="1" max="10" value="1" />
+            </div>
+            <div>
+              <label for="attendance">Will you attend?</label>
+              <select id="attendance" name="attendance" required>
+                <option value="">Select…</option>
+                <option value="yes">Joyfully accepts</option>
+                <option value="no">Regretfully declines</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="dietary">Dietary notes (optional)</label>
+            <textarea id="dietary" name="dietary" rows="3" placeholder="Allergies or preferences"></textarea>
+          </div>
+          <div class="field">
+            <label for="message">Message for the couple (optional)</label>
+            <textarea id="message" name="message" rows="3" placeholder="A few kind words…"></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Send RSVP</button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="footer__names">SARA <span class="footer__amp">&amp;</span> MOHAMED</p>
+        <p class="footer__date">May 2, 2026 · With love</p>
+      </div>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
